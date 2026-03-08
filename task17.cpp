@@ -1,22 +1,19 @@
 #include<iostream>
 using namespace std;
-main(){
-cout<<"Enter age:";
-int age;
-cin>>age;
-cout<<"Enter moves:";
-int moves;
-cin>>moves;
-int Average_years=age/(moves+1);
-cout<<"Average_years="<<Average_years;
+int main(){
+cout<<"Enter any character in lower case:";
+char ch;
+cin>>ch;
 
-
-
-
-
-
-
-
-
-
+ if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+{cout<<"It is a vowel"<<endl;
+}
+else if(ch>='a'&&ch<='z'){
+    cout<<"It is a consotant"<<endl;
+}
+else if(ch>='0'&&ch<='9'){
+    cout<<"It is a number"<<endl;
+}
+else{cout<<ch<<"is an invalid number.";
+}
 }

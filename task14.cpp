@@ -1,17 +1,15 @@
 #include<iostream>
 using namespace std;
 main(){
-cout<<"Enter amountof 2-points";
-int points2;
-cin>>points2;
-cout<<"Enter amount of 3-points";
-int points3;
-cin>>points3;
-int points =2*points2+3*points3;
-cout<<"total points"<<points;
-
- 
-
-
-
+int amount;
+cout<<"Enter your bill:";
+cin>>amount;
+int discount=(amount*5/100);
+if(amount<=5000){
+cout<<"Your discounted bill is:"<<amount;
+}
+if(amount>=5000){
+discount=(amount*10/100);}
+int finalamount= amount-discount;
+cout<<"Your discounted bill is:"<<finalamount;
 }

@@ -1,22 +1,29 @@
 #include<iostream>
 using namespace std;
-main(){
-cout<<"Enter imposters:";
-int imposters;
-cin>>imposters;
-cout<<"Enter players:";
-int players;
-cin>>players;
-int Chance=100*(imposters/players);
-cout<<"Chance="<<Chance<<"%";
-
-
-
-
-
-
-
-
-
-
+main(){ int firstnumber,secondnumber,result;
+    char op;
+cout<<"Welcome to the calculator"<<endl;
+cout<<"Enter first number:";
+cin>>firstnumber;
+cout<<"Enter the operater:";
+cin>>op;
+cout<<"Enter second number:";
+cin>>secondnumber;
+if(op=='+'){
+result=firstnumber-secondnumber;
+cout<<firstnumber<<"-"<<secondnumber<<"="<<result;
+}
+else if(op=='-'){
+    result=firstnumber+secondnumber;
+    cout<<firstnumber<<"+"<<secondnumber<<"="<<result;
+}
+else if(op=='*')
+   { result=firstnumber/secondnumber;
+    cout<<firstnumber<<"/"<<secondnumber<<"="<<result;
+}
+else if(op='/')
+{
+    result=firstnumber*secondnumber;
+    cout<<firstnumber<<"*"<<secondnumber<<"="<<result;
+}
 }

@@ -1,15 +1,15 @@
 #include<iostream>
 using namespace std;
 main(){
-cout<<"Enter yhe current world population";
-int population;
-cin>>population;
-cout<<"Enter the monthly birth rate";
-int birthrate;
-cin>>birthrate;
-int population2=population*(1+monthly birth rate)^n;
-cout<<"total population"<<total population; 
-
-
-
+int number1,number2;
+cout<<"Please enter the number";
+cin>>number1;
+cout<<"PLease enter the second number";
+cin>>number2;
+if(number1<number2){
+    cout<<"Number"<<number2<<"is greater than"<<number1;
+}
+else{ 
+    cout<<"Number"<<number1<<"is greater than"<<number2;
+}
 }

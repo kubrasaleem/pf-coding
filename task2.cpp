@@ -1,11 +1,10 @@
 #include<iostream>
 using namespace std;
 main(){
-cout<<"Enter weight in pounds";
-float weight;
-cin>>weight;
-float lb = weight*0.45;
-cout<<"weight"<<weight<<"into lb"<<lb;
-
-
+    char going;
+    cout<<"Are your freinds going?(Press y for yes)";
+   cin>>going;
+   if (going =='y'){ 
+    cout<<"You are also going!";
+}
 }

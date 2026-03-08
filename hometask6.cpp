@@ -1,17 +1,26 @@
 #include<iostream>
 using namespace std;
-main(){
-cout<<"Enter size of fertilizer bag:";
-float fertilizerbag;
-cin>>fertilizerbag;
-cout<<"Enter cost of bag in dollars($):$";
-float dollars;
-cin>>dollars;
-cout<<"size of area that bag can cover:";
-float area;
-cin>>area;
-float costfertilizerperpound=dollars/fertilizerbag;
-cout<<"costfertilizerperpound:$"<<costfertilizerperpound<<endl;
-float costfertilizerpersquarefoot=dollars/area;
-cout<<"costfertilizerpersquarefoot($):$"<<costfertilizerpersquarefoot;
+int main(){
+    int speed;
+    cout<<"Speed:";
+    cin>>speed;
+    if(speed<10){
+    cout<<"Slow";
+}
+ else if(speed<=50){
+    cout<<"Average";
+
+}
+else if(speed<=150){
+    cout<<"Fast";
+
+}
+else if(speed<=1000){
+cout<<"Ultrafast";
+}
+
+else if(speed>1000){
+    cout<<"Extremely fast";
+}
+return 0;
 }

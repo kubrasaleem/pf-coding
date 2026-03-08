@@ -1,16 +1,13 @@
 #include<iostream>
 using namespace std;
 main(){
-cout<<"Enter number of minutes";
-int minutes;
-cin>>minutes;
-cout<<"Enter number of frames";
-float frames;
-cin>>frames;
-float totalframes=(minutes*60)*frames;
-cout<<"totalframes"<<totalframes;
-
-
-
-
+int speed;
+cout<<"Enter speed(km/h):";
+cin>>speed;
+if(speed>100){
+    cout<<"Halt...YOU WILL BE CHALLANED!!!";
+}
+else{
+    cout<<"Perfect!You are going good.";
+} 
 }

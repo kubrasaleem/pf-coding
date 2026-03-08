@@ -1,24 +1,27 @@
 #include<iostream>
 using namespace std;
- main(){
-cout<<"Enter paint area:";
-int area;
-cin>>area;
-cout<<"Enter width:";
-int width;
-cin>>width;
-cout<<"Enter height:";
-int height;
-cin>>height;
-int Walls_painted=area/(width*height);
-cout<<"Walls_painted="<<Walls_painted;
-
-
-
-
-
-
-
-
-
+main(){
+int age1,age2,age3;
+string name1,name2,name3;
+cout<<"Enter name of first brother:";
+cin>>name1;
+cout<<"Enter age of first brother:";
+cin>>age1;
+cout<<"Enter name of second brother:";
+cin>>name2;
+cout<<"Enter age of second brother:";
+cin>>age2;
+cout<<"Enter name of third brother:";
+cin>>name3;
+cout<<"Enter the age of third brother:";
+cin>>age3;
+if(age1<age2&&age1<age3){
+    cout<<name1 <<" is yhe youngest brother."<<endl;
+}
+if(age2<age1&&age2<age3){
+    cout<<name2 <<" is the youngest."<<endl;
+}
+if(age3<age2&&age3<age1){
+    cout<<name3 <<" is the youngest."<<endl;
+}
 }
