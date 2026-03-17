@@ -1,14 +1,23 @@
 #include<iostream>
 using namespace std;
-main(){
-string my_password,user_enter;
-my_password="Pass@123!";
-cout<<"Enter password:";
-cin>> user_enter;
-if(user_enter==my_password){
-    cout<<"Wow!You have cracked code!";
+ main()
+ {
+    int rows=6;
+    int i,j;
+    for(i=1;i<=rows;i++) 
+    {
+    for( j=1;j<=i;j++)
+    {
+    cout<<"*";
+    }
+    cout<<endl;
 }
-else{
-    cout<<"It is not that simple, Try again";
+for(i=rows-1;i>=1;i--)
+{
+for(j=1;j<=i;j++)
+{
+    cout<<"*";
+}
+cout<<endl;
 }
 }

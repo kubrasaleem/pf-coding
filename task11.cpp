@@ -1,15 +1,22 @@
 #include<iostream>
 using namespace std;
 main(){
-int number1,number2;
-cout<<"Please enter the number";
-cin>>number1;
-cout<<"PLease enter the second number";
-cin>>number2;
-if(number1<number2){
-    cout<<"Number"<<number2<<"is greater than"<<number1;
+int a;
+cout<<"Enter first number:";
+cin>>a;
+int b;
+cout<<"Enter second number:";
+cin>>b;
+int gcd=1;
+for( int i=1;i<=(a<b?a:b);i++)
+{if(a%i==0&&b%i==0)
+    gcd=i;
+
 }
-else{ 
-    cout<<"Number"<<number1<<"is greater than"<<number2;
-}
+int lcm=(a*b)/gcd;
+cout<<"GCD:"<<gcd<<endl;
+cout<<"LCM:"<<lcm<<endl;
+
+
+
 }

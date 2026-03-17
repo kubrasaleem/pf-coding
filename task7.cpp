@@ -1,18 +1,10 @@
 #include<iostream>
 using namespace std;
-main(){
-char going;
-cout<<"Are your freinds going?(press y for yes):";
-cin>>going;
-if (going=='y'){
-    cout<<"You are also going";
-
+main (){
+char ch='y';
+while(ch=='y'){
+cout<<"Iam happy."<<endl;
+cout<<"Press y to continue or any key to exit:"<<endl;
+cin>>ch;
 }
-else{
-    cout<<"you are not going!";
-}
-
-
-
-
 }

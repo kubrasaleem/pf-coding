@@ -1,35 +1,18 @@
 #include<iostream>
 using namespace std;
 main(){
-cout<<"Enter number of squares metres you can paint:";
-int numberofpaints;
-cin>>numberofpaints;
-cout<<"Enter width of single wall(in metres):";
-int width;
-cin>>width;
-cout<<"Enter height of single wall(in metres):";
-int height;
-cin>>height;
-int Number_of_walls_you_can_paint=numberofpaints/(width*height);
-cout<<"Number_of_walls_you_can_paint:"<<Number_of_walls_you_can_paint; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+int a;
+cout<<"Enter first number:";
+cin>>a;
+int b;
+cout<<"Enter second number:";
+cin>>b;
+int gcd=1;
+for( int i=1;i<=(a<b?a:b);i++)
+{if(a%i==0&&b%i==0)
+    gcd=i;
+}
+int lcm=(a*b)/gcd;
+cout<<"GCD:"<<gcd<<endl;
+cout<<"LCM:"<<lcm<<endl;
 }

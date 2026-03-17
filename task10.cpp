@@ -1,14 +1,12 @@
 #include<iostream>
 using namespace std;
 main(){
-int number,even;
-cout<<"Please enter the number:";
-cin>>number;
-even=number%2;
-if(even==0){
-    cout<<"The number is even";
+int i=1,sum=0;
+while(i<=5)
+{
+    sum=sum+i;
+    i=i+1;
 }
-else{
-    cout<<"The number is odd";
-}
+cout<<sum;
+
 }

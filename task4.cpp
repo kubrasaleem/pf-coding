@@ -1,14 +1,18 @@
 #include<iostream>
 using namespace std;
-main(){
-cout<<"Enter the charge";
-int charge;
-cin>>charge;
-cout<<"Enter the time";
-float time;
-cin>>time;
-float current=charge/time;
-cout<<"current "<<current<<" into amperes";
+int main (){
+    int n,count=0;
+    cout<<"Enter number:";
+    cin>>n;
+    for(int i=n; i>0; i=i/10)
+    {
+        count=count+1;
+    }
+    cout<<"Total number of digits:"<<count;
+    return 0;
+
+
+
 
 
 }

@@ -1,56 +1,15 @@
 #include<iostream>
 using namespace std;
-main(){
-cout<<"Enter N1:";
-int N1;
-cin>>N1;
-cout<<"Enter N2:";
-int N2;
-cin>>N2;
-cout<<"Enter N3:";
-int N3;
-cin>>N3;
-cout<<"Enter N4:";
-int N4;
-cin>>N4;
-cout<<"Enter N5:";
-int N5;
-cin>>N5;
-cout<<"Enter N6:";
-int N6;
-cin>>N6;
-cout<<"Enter N7:";
-int N7;
-cin>>N7;
-cout<<"Enter N8:";
-int N8;
-cin>>N8;
-cout<<"Enter N9:";
-int N9;
-cin>>N9;
-cout<<"Enter N10:";
-int N10;
-cin>>N10;
-cout<<"Enter N11:";
-int N11;
-cin>>N11;
-cout<<"Enter N12:";
-int N12;
-cin>>N12;
-cout<<"Enter N13:";
-int N13;
-cin>>N13;
-cout<<"Enter N14:";
-int N14;
-cin>>N14;
-cout<<"Enter N15:";
-int N15;
-cin>>N15;
-int sum=N1+N2+N3+N4+N5;
-int multiply=N6*N7*N8*N9*N10;
-int subtract=N11-N12-N13-N14-N15;
-int adds=sum+multiply;
-adds-=subtract;
-cout<<"Finalresult= "<<adds;
+int main(){
+int num, sum=0;
+cout<<"Enter a number:";
+cin>>num;
+while(num>0)
+{   
+    sum=sum+(num%10);
+    num=num/10;
+}
+cout<<"Sum of digits="<<sum;
+return 0;
 
 }

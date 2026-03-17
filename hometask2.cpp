@@ -1,13 +1,12 @@
 #include<iostream>
 using namespace std;
 main(){
-int speed;
-cout<<"Enter speed(km/h):";
-cin>>speed;
-if(speed>100){
-    cout<<"Halt...YOU WILL BE CHALLANED!!!";
+int num=0,sum=0;
+
+while(num>=0){
+    sum=sum+num;
+    cout<<"Enter a number:";
+    cin>>num;
 }
-else{
-    cout<<"Perfect!You are going good.";
-} 
+cout<<"Sum:"<<sum;
 }

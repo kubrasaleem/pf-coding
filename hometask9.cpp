@@ -1,16 +1,20 @@
 #include<iostream>
 using namespace std;
-main(){
-cout<<"Enter a 4-Digit number:";
-int Number;
-cin>>Number;
-int digit1=(Number/1000);
-int digit2=(Number/100)%10;
-int digit3=(Number/10)%10;
-int digit4=Number%10;
-int sum=digit1+digit2+digit3+digit4;
-cout<<"Sum of digits="<<sum<<endl;
-
-
-
+main (){
+    int number;
+    int digit;
+    int frequency=0;
+cout<<"Enter number:";
+cin>>number;
+cout<<"Enter digit:";
+cin>>digit;
+for(number;number>0 ;number/=10)
+{  int  lastdigit=number%10;
+if(lastdigit==digit)
+{
+    frequency++;
+}
+}
+cout<<"Frequency="<<frequency;
+return 0;
 }

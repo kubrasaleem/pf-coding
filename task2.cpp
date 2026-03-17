@@ -1,10 +1,10 @@
 #include<iostream>
 using namespace std;
 main(){
-    char going;
-    cout<<"Are your freinds going?(Press y for yes)";
-   cin>>going;
-   if (going =='y'){ 
-    cout<<"You are also going!";
+int sum=0;
+for(int i=1;i<=5;i=i+1)
+{sum=sum+i;
 }
+cout<<sum<<endl;
+
 }

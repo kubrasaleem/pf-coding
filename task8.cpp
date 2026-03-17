@@ -1,13 +1,17 @@
 #include<iostream>
 using namespace std;
 main(){
-string name;
-cout<<"Please enter your name";
-cin>>name;
-if (name=="ali"){
-    cout<<"Welcome"<<name;
+int value;
+cout<<"Plase enter a positive number:";
+cin>>value;
+while (value<=0)
+{
+    cout<<"Error:"<<value<<"is not a positive number."<<endl;
+    cout<<"Please enter a positive number: ";
+    cin>>value;
 }
-if (name != "ali"){
-    cout<<"Try again!";
-}
+cout<<"Program Ends"<<endl;
+
+
+
 }
