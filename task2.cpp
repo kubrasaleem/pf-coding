@@ -1,10 +1,10 @@
 #include<iostream>
+#include<windows.h>
 using namespace std;
-main(){
-int sum=0;
-for(int i=1;i<=5;i=i+1)
-{sum=sum+i;
-}
-cout<<sum<<endl;
-
-}
+int main(){
+while(true){
+        cout<<"Name: ";
+        Sleep(200);
+    }
+    return 0;
+    }

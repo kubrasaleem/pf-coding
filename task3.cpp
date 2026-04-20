@@ -1,18 +1,13 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
-main(){
-int n1=0, n2=1, next;
-int n;
-cout<<"How many numbers of Fibonacci series you want to print:";
-cin>>n;
-cout<<n1<<",";
-cout<<n2;
-for(int x=1;x<n-1;x=x+1)
-{next=n1+n2;
-cout<<","<<next;
-n1=n2;
-n2=next;
-
-}
-
+int main(){
+int number1,number2;
+cout<<"Enter number1:";
+cin>>number1;
+cout<<"Enter number2:";
+cin>>number2;
+cout<<"Greater number: "<<
+max(number1,number2);
+return 0;
 }

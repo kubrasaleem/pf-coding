@@ -1,23 +1,25 @@
 #include<iostream>
 using namespace std;
- main()
- {
-    int rows=6;
-    int i,j;
-    for(i=1;i<=rows;i++) 
+string timetravel(int hh,int  mm){
+    mm=mm+15;
+if(mm>=60){
+    mm=mm-60;
+    hh=hh+1;
+}
+if(hh>=24)
     {
-    for( j=1;j<=i;j++)
-    {
-    cout<<"*";
-    }
-    cout<<endl;
+        hh=hh-24;
 }
-for(i=rows-1;i>=1;i--)
-{
-for(j=1;j<=i;j++)
-{
-    cout<<"*";
+return to_string(hh) + ":" +to_string(mm);
 }
-cout<<endl;
-}
+int main(){
+    cout<<"Enter hours:";
+    int h;
+    cin>>h;
+    cout<<"Enter minutes:";
+    int m;
+    cin>>m;
+string futuretime=timetravel(h,m);
+cout<<"Future time "<< futuretime<<endl;
+
 }

@@ -1,12 +1,23 @@
 #include<iostream>
 using namespace std;
-main(){
-int i=1,sum=0;
-while(i<=5)
+string checkalphabetcase(char ch)
 {
-    sum=sum+i;
-    i=i+1;
+if(ch =='A'){
+    cout<<"You have entered capital A.";
+    }
+ else if(ch =='a')   
+    {
+    cout<<"You have entered small a.";
 }
-cout<<sum;
+else {
+    cout<<"You enetred another alphabet.";
+}
+}
+int main(){
+char ch;
+cout<<"Enter a character:";
+cin>>ch;
+checkalphabetcase(ch);
+return 0;
 
 }

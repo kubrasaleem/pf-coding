@@ -1,9 +1,15 @@
 #include<iostream>
 using namespace std;
-main(){
-    for(int i = 1; i<=10;i=i+1)
-{cout<<i<<endl;
-
+void add(int number1,int number2);
+int main(){
+    int number1,number2;
+    cout<<"Enter number1:";
+    cin>>number1;
+    cout<<"Enter number2:";
+    cin>>number2;
+    add(number1,number2);
+    return 0;
 }
-
+void add(int number1,int number2){
+    cout<<"Sum: "<<number1+number2;
 }

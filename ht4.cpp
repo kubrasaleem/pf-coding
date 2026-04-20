@@ -1,15 +1,38 @@
 #include<iostream>
-#include<string>
-using namespace std;
-main(){
-    string students[5];
-    cout<<"Enter names of 5 students:"<<endl;
-for(int i=0; i<5; i++){
-cin>>students[i];
+using namespace std;   
+float taxcaculculator(char type,float price){
+float taxrate=0;
+if(type=='M' || type=='m'){
+taxrate=6;
 }
-cout<<"Student Names are:"<<endl;
-for(int i=0; i<5; i++){
-    cout<<students[i]<<endl;
+if(type=='E' || type=='e'){
+taxrate=8;
 }
+else if(type=='S' || type=='s'){
+taxrate=10;
+}
+else if(type=='V' || type=='v'){
+taxrate=12;
+}
+else if(type=='T' || type=='t'){
+taxrate=15;
+}
+else{
+    cout<<"Invalid vehicle code type!";
+}
+float taxamount=price*taxrate/100;
+float finalprice=price+taxamount;
+return finalprice;
+}
+int main(){
+    char type;
+    float price;
+    cout<<"Enter vehicle type(M/E/S/V/T):";
+    cin>>type;
+    cout<<"Enter price  of vehicle:";
+    cin>>price;
+    float finalprice=taxcaculculator( type, price);
+    cout<<"The final price of vehicle in $ is "<< finalprice <<endl;
+    return 0;
 
 }

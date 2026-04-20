@@ -1,18 +1,13 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
-int main (){
-    int n,count=0;
-    cout<<"Enter number:";
-    cin>>n;
-    for(int i=n; i>0; i=i/10)
-    {
-        count=count+1;
-    }
-    cout<<"Total number of digits:"<<count;
-    return 0;
-
-
-
-
-
+int main(){
+int number1,number2;
+cout<<"Enter number1:";
+cin>>number1;
+cout<<"Enter number2:";
+cin>>number2;
+cout<<"Minimum number: "<<
+min(number1,number2);
+return 0;
 }

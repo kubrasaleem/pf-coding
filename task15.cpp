@@ -1,65 +1,38 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main (){
-    int ATM_PIN=1234;
-    int choice;
-    double balance=1000;
-   int attempts=0;
-   while(attempts<3){
-    cout<<"Enter ATM PIN:";
-cin>>ATM_PIN;
- if(ATM_PIN==1234){
-    cout<<"Log in Successful"<<endl;
-    break;
-}
-else {
-    attempts++;
-    cout<<"Wrong PIN"<<endl;
-    if(attempts>=3){
-    cout<<"Toom many attempts. Card blocked."<<endl;
-    return 0;
-    }
-    }
-    }
-    while(true)
+string calculatePoolState(int V, int P1, int P2, float H)
+{
+    float totalWater = (P1 + P2)*H;
+    if (totalWater > V)
     {
-    int choice;
-cout<<endl<<"-------ATM MENU-------"<<endl;
-cout<<"1.Check balance "<<endl;
-cout<<"2.Deposit money"<<endl;
-cout<<"3.Withdraw Money"<<endl;
-cout<<"4.Exit"<<endl;
-cout<<"Enter choice:";
-cin>>choice;
-if(choice==1){
-    cout<<"Current balance:"<<balance;
-}
-else if(choice==2){
-    int deposit1;
-    cout<<"Enter amount to deposit:";
-    cin>>deposit1;
-    int depositamount2=balance+deposit1;
-    cout<<"Money deposited succesfully."<<endl;
-}
-  else if(choice==3){
-    int withdraw;
-    cout<<"Enter amount to withdraw:";
-    cin>>withdraw;
-    if(withdraw<=balance){
-    int withdraw2=balance-withdraw;
-   cout<<"Please collect tour cash."<<endl;
-}
-    else{
-    cout<<"Insufficient balance."<<endl;
+        float overflow = totalWater - V;
+        cout<< "For " << H << " hours the pool overflows with "
+             << (int)overflow << " liters.";
     }
+    else
+    {
+        int poolPercent = (int)((totalWater / V) * 100);
+        int pipe1Percent = (int)(((P1 * H) / totalWater) * 100);
+        int pipe2Percent = (int)(((P2 * H) / totalWater) * 100);
+
+        cout<<"The pool is "<< poolPercent << "% full. "<<
+               "Pipe 1: " << pipe1Percent<< "%. "<< 
+               "Pipe 2: " << pipe2Percent<< "%.";
     }
-   else if(choice==4){
-    cout<<"Thank you for using ATM:"<<endl;
 }
-else{
-    cout<<"Invalid choice:";
-    break;
-}
-cout<<endl;
-}
+int main()
+{
+    int V, P1, P2;
+    float H;
+    cout << "Enter volume of the pool in liters (1-10000): ";
+    cin >> V;
+    cout << "Enter flow rate of Pipe 1 per hour (1-5000): ";
+    cin >> P1;
+    cout << "Enter flow rate of Pipe 2 per hour (1-5000): ";
+    cin >> P2;
+    cout << "Enter hours worker is absent (1-24): ";
+    cin >> H;
+    calculatePoolState(V, P1, P2, H);
+
+    return 0;
 }

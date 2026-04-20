@@ -1,22 +1,25 @@
 #include<iostream>
 using namespace std;
-main(){
-int a;
-cout<<"Enter first number:";
-cin>>a;
-int b;
-cout<<"Enter second number:";
-cin>>b;
-int gcd=1;
-for( int i=1;i<=(a<b?a:b);i++)
-{if(a%i==0&&b%i==0)
-    gcd=i;
-
-}
-int lcm=(a*b)/gcd;
-cout<<"GCD:"<<gcd<<endl;
-cout<<"LCM:"<<lcm<<endl;
-
-
-
-}
+ bool issymmetrical(int n){
+    int digit1=n/100;
+    int digit2=n/10%10;
+    int digit3=n%10;
+    if(digit1==digit3){
+        return true;
+    }
+    else{ 
+        return false;
+    }
+ }
+ int main(){
+    cout<<"Enter three digits number.";
+    int n;
+    cin>>n;
+    if(issymmetrical(n)==true){
+        cout<<"The number is symmetrical.";
+    }
+    else{
+        cout<<"The number is not symmetrical.";
+    }
+    return 0;
+ }
