@@ -1,55 +1,57 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
-double cd(double a, double b, double c)
-{
-    double disc = b * b - 4 * a * c;
-    return disc;
+
+// Function to count identical rows
+int countIdenticalRows(int M[][3], int n) {
+    int count = 0;
+
+    // Compare every row with next rows
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+
+            // Check if row i and row j are same
+            if (M[i][0] == M[j][0] &&
+                M[i][1] == M[j][1] &&
+                M[i][2] == M[j][2]) {
+                count++;
+            }
+        }
+    }
+
+    return count;
 }
-void solveroots(double a, double b, double c)
-{
-    double discremenant = cd(a, b, c);
-    cout << "Dicremenant" << discremenant << endl;
-    if (discremenant > 0)
-    {
-        double root1 = (-b + sqrt(discremenant)) / (2 * a);
-        double root2 = (-b - sqrt(discremenant)) / (2 * a);
-        cout << "Solutions:";
-        cout << "X=" << root1 << " and X =" << root2 << endl;
+
+// Print matrix
+void printMatrix(int M[][3], int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << M[i][j] << " ";
+        }
+        cout << endl;
     }
-    else if (discremenant == 0)
-    {
-        double root = -b / (2 * a);
-        cout << "Solutions:";
-        cout << "X= " << root << endl;
-    }
-    else
-    {
-        double realpart = -b / (2 * a);
-        double imaginarypart = sqrt(-discremenant) / (2 * a);
-        cout << "Complex solutions:";
-        cout << "X= " << realpart << " +" << imaginarypart << " i " << endl;
-        cout << "X= " << realpart << " -" << imaginarypart << " i " << endl;
-    }
-    cout << endl;
 }
-int main()
-{
-    double a, b, c;
-    char choice;
-    cout << "Enter the value of a:";
-    cin >> a;
-    if (a == 0)
-    {
-        cout << "Error! 'a' can not be zero. Not a quadratic equation." << endl;
+
+int main() {
+    int n;
+
+    cout << "Enter number of rows: ";
+    cin >> n;
+
+    int M[100][3];  // max 100 rows
+
+    cout << "Enter elements (" << n << "x3 matrix):\n";
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < 3; j++) {
+            cin >> M[i][j];
+        }
     }
-    else
-    {
-        cout << "Enter the value of b:";
-        cin >> b;
-        cout << "Enter the value of c:";
-        cin >> c;
-        solveroots(a, b, c);
-    }
+
+    cout << "\nMatrix:\n";
+    printMatrix(M, n);
+
+    int result = countIdenticalRows(M, n);
+
+    cout << "\nTotal Identical Rows: " << result << endl;
+
     return 0;
 }
